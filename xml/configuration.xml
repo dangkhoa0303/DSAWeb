@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Assignment -->
+<assignment>
+	<!-- Api Keys -->
+	<api_keys>
+		<google_maps>AIzaSyACC6G2UjsfaZuFLZomrc_hQHJYew3wtX8</google_maps>
+		<open_weather>1800206b5f583afb545ea16de7b7c7e1</open_weather>
+	</api_keys>
+	<!-- End Api Keys -->
+
+	<!-- Api links -->
+	<api_links>
+		<google_api_console>https://console.developers.google.com</google_api_console>
+		<open_weather_api>https://openweathermap.org/api</open_weather_api>
+	</api_links>
+	<!-- End Api links -->
+
+	<!-- Database -->
+	<database type="sql">
+
+		<!-- Country table -->
+		<country_table>
+			<country countryID="1">
+				<name>France</name>
+				<latitude>46.2276</latitude>
+				<longitude>2.2137</longitude>
+				<population>66.03</population>
+				<desciption>France, in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower. The country is also renowned for its wines and sophisticated cuisine. Lascaux's ancient cave drawings, Lyon's Roman theater and the vast Palace of Versailles attest to its rich history.</desciption>
+				<languages>French</languages>
+				<climate>Oceanic climate</climate>
+				<economy>A member of the Group of 7 (formerly G8) leading industrialised countries, as of 2014, it is ranked as the world's ninth largest and the EU's second largest economy by purchasing power parity.</economy>
+				<history>The oldest traces of human life in what is now France date from approximately 1.8 million years ago.</history>
+			</country>
+
+			<country countryID="2">
+				<name>Portugal</name>
+				<latitude>39.3999</latitude>
+				<longitude>-8.2245</longitude>
+				<population>10.46</population>
+				<desciption>Portugal is a southern European country on the Iberian Peninsula, bordering Spain. Its location on the Atlantic Ocean has influenced many aspects of its culture like salt cod and grilled sardines are national dishes, the Algarve's beaches are a major destination and much of the nation's architecture dates to the 1500s-1800s, when Portugal had a powerful maritime empire.</desciption>
+				<languages>Portugese</languages>
+				<climate>Mediterranean climate</climate>
+				<economy>Portugal is a developed and a high-income country, with its GDP per capita in 2014.</economy>
+				<history>The name of Portugal derives from the joined Romano Celtic name Portus Cale.</history>
+			</country>
+
+			<country countryID="3">
+				<name>New Zealand</name>
+				<latitude>-40.9006</latitude>
+				<longitude>174.8860</longitude>
+				<population>4.471</population>
+				<desciption>New Zealand is a country in the southwestern Pacific Ocean consisting of 2 main islands, both marked by volcanoes and glaciation. Capital Wellington, on the North Island, is home to Te Papa Tongarewa, the expansive national museum. Wellington's dramatic Mt. Victoria, along with the South Island's Fiordland and Southern Lakes, stood in for mythical Middle Earth in Peter Jackson's - Lord of the Rings films.</desciption>
+				<languages>New Zealand English</languages>
+				<climate>Maritime climate</climate>
+				<economy>New Zealand has a high-income economy with a nominal gross domestic product (GDP) per capita of US $36,254.</economy>
+				<history>New Zealand was one of the last major landmasses settled by humans.</history>
+			</country>
+
+			<country countryID="4">
+				<name>Italy</name>
+				<latitude>41.8719</latitude>
+				<longitude>12.5674</longitude>
+				<population>59.83</population>
+				<desciption>Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and ancient ruins. Other major cities include Florence, with Renaissance masterpieces such as Michelangelo's David and Brunelleschi's Duomo like Venice, the city of canals and Milan, Italy's fashion capital.</desciption>
+				<languages>Italian</languages>
+				<climate>Climate ranges from humid subtropical to humid continental and oceanic</climate>
+				<economy>Italy is regarded as one of the world's most industrialised nations and a leading country in world trade and exports.</economy>
+				<history>In the 14th and 15th centuries, northern central Italy was divided into a number of warring city states, the rest of the peninsula being occupied by the larger Papal States and the Kingdom of Sicily, referred to here as Naples.</history>
+			</country>
+
+			<country countryID="5">
+				<name>Argentina</name>
+				<latitude>-38.416097</latitude>
+				<longitude>-63.616672</longitude>
+				<population>41.45</population>
+				<desciption>Argentina is a massive South American nation with terrain encompassing Andes mountains, glacial lakes and Pampas grassland, the traditional grazing ground of its famed beef cattle. The country is famous for tango dance and music. Its big, cosmopolitan capital, Buenos Aires, is centered on the Plaza de Mayo, lined with stately 19th-century buildings including Casa Rosada, the iconic, balconied presidential palace.</desciption>
+				<languages>Spanish</languages>
+				<climate>Climate ranges from subtropical in the north to subpolar in the far south</climate>
+				<economy>Benefiting from rich natural resources, a highly literate population, a diversified industrial base, and an export oriented agricultural sector, the economy of Argentina is Latin America's third-largest, and the second largest in South America.</economy>
+				<history>The history of Argentina is divided by historians into four main parts like the pre Columbian time or early history, the colonial period 1530-1810, the period of nation building 1810-1880, and the history of modern Argentina from around 1880.</history>
+			</country>
+		</country_table>
+		<!-- End Country table -->
+
+		<!-- Region table -->
+		<region_table>
+			<region countryID="1" regionID="1">
+				<name>Bordeaux</name>
+				<latitude>44.8378</latitude>
+				<longitude>-0.5792</longitude>
+				<population>239.157</population>
+				<desciption>Bordeaux, hub of the famed wine growing region, is a port city on the Garonne River in southwestern France. It's known for its Gothic Cathedrale Saint Andre, 18th to 19th century mansions and notable art museums such as the Musee des Beaux Arts de Bordeaux. Public gardens line the curving river quays. The grand Place de la Bourse, centered on the Three Graces fountain, overlooks the Miroir d'Eau reflecting pool.</desciption>
+				<languages>French</languages>
+				<climate>Oceanic climate</climate>
+				<economy>Bordeaux is a major centre for business in France as it has the fifth largest metropolitan population in France.</economy>
+				<history>In historical times, around 300 BC it was the settlement of a Celtic tribe, the Bituriges Vivisci, who named the town Burdigala, probably of Aquitanian origin. The name Bourde is still the name of a river south of the city.</history>
+			</region>
+
+			<region countryID="1" regionID="2">
+				<name>Burgundy</name>
+				<latitude>47.0525</latitude>
+				<longitude>4.3837</longitude>
+				<population>1.644</population>
+				<desciption>Burgundy is a historical region in east-central France. It's famous for its Burgundy wines as well as Pinot Noirs and Chardonnays, Chablis and Beaujolais. The area is crisscrossed by a network of canals and studded with grand chateaux, some now luxury hotels. The capital, Dijon, of mustard fame, is home to the imposing Palace of the Dukes, where the distinguished Musee des Beaux-Arts was established in 1787.</desciption>
+				<languages>French</languages>
+				<climate>Half-continental climate</climate>
+				<economy>Earlier, the southeastern part of Burgundy was heavily industrial, with coal mines near Montceau-les-Mines and iron foundries and crystal works in Le Creusot. These industries declined in the second half of the twentieth century, and Le Creusot has tried to reinvent itself as a tourist town.</economy>
+				<history>Historically, Burgundy has referred to numerous political entities, including kingdoms and duchies spanning territory from the Mediterranean to the Low Countries.</history>
+			</region>
+
+			<region countryID="1" regionID="3">
+				<name>Champagne</name>
+				<latitude>48.0266</latitude>
+				<longitude>0.3332</longitude>
+				<population>1.337</population>
+				<desciption>The Champagne wine region is a historic province within the administrative province of Champagne in the northeast of France. The area is best known for the production of the sparkling white wine that bears the region's name.</desciption>
+				<languages>French</languages>
+				<climate>Oceanic climate</climate>
+				<economy>While totally dominating the region's production, sparkling Champagne is not the only product that is made from the region's grapes. Non-sparkling still wines, like those made around the village Bouzy, are sold under the appellation label Coteaux Champenois.</economy>
+				<history>The Carolingian reign saw periods of prosperity for the Champagne region beginning with Charlemagne's encouragement for the area to start planting vines and continuing with the coronation of his son Louis the Pious at Reims.</history>
+			</region>
+
+			<region countryID="1" regionID="4">
+				<name>Loire</name>
+				<latitude>47.55324</latitude>
+				<longitude>1.010529</longitude>
+				<population>0.5</population>
+				<desciption>The Loire is the longest river in France, stretching some 1,000km from its source in the south to the Atlantic coast a little west of Nantes.</desciption>
+				<languages>French</languages>
+				<climate>Oceanic climate</climate>
+				<economy>The Loire Valley has a high density of vine plantings with an average of 1,600-2,000 vines per acre.</economy>
+				<history>The Loire Valley wine region includes the French wine regions situated along the Loire River from the Muscadet region near the city of Nantes on the Atlantic coast to the region of Sancerre and Pouilly-Fume just southeast of the city of Orleans in north central France.</history>
+			</region>
+
+		</region_table>
+		<!-- End Region table -->
+
+		<!-- Wine Type table -->
+		<wine_type_table>
+			<type typeID="1">Red Wine</type>
+			<type typeID="2">White Wine</type>
+			<type typeID="3">Rose Wine</type>
+			<type typeID="4">Champagne</type>
+			<type typeID="5">Sparkling Wine</type>
+		</wine_type_table>
+		<!-- End Wine Type Table -->
+
+		<!-- Suppliers table -->
+		<suppliers_table>
+			<supplier supplierID="1">Adega Vila Real</supplier>
+			<supplier supplierID="2">Adega de Moncao</supplier>
+			<supplier supplierID="3">Maison Sichel</supplier>
+			<supplier supplierID="4">Bordeaux/Bordeaux Superieur</supplier>
+			<supplier supplierID="5">Dourthe</supplier>
+			<supplier supplierID="6">Hunter's Wines</supplier>
+			<supplier supplierID="7">Spy Valley</supplier>
+			<supplier supplierID="8">Allegrini</supplier>
+			<supplier supplierID="9">Antonio Fattori</supplier>
+			<supplier supplierID="10">Camillo de Lellis</supplier>
+			<supplier supplierID="11">Bodegas Weinert</supplier>
+			<supplier supplierID="12">Dominio del Plata</supplier>
+			<supplier supplierID="13">55malbec</supplier>
+			<supplier supplierID="14">Jean-Marc and Julien Brocard</supplier>
+			<supplier supplierID="15">The Wine Gang</supplier>
+			<supplier supplierID="16">Pierre Gimonnet</supplier>
+			<supplier supplierID="17">Ruppertsberger Winzerverein</supplier>
+			<supplier supplierID="18">Reichsgraf von Kesselstatt</supplier>
+			<supplier supplierID="19">Boutinot</supplier>
+			<supplier supplierID="20">Painted Wolf Wines</supplier>
+			<supplier supplierID="21">Bougrier</supplier>
+			<supplier supplierID="22">Araldica Vini Piemontesi</supplier>
+			<supplier supplierID="23">Central Italy</supplier>
+			<supplier supplierID="24">Alovini</supplier>
+			<supplier supplierID="25">Contesa</supplier>
+		</suppliers_table>
+		<!-- End Suppliers table -->
+
+		<!-- Wine table -->
+		<wine_table>
+
+			<wine countryID="4" typeID="2" supplierID="25">
+				<name>PECORINO ABRUZZO, CONTESA 2015</name>
+				<alcohol>13</alcohol>
+				<colour>White</colour>
+				<desciption>Contesa means 'quarrel' in Italian, but our Wine Champions panel settled convivially on crowning this characterful Abruzzo white. Refreshingly dry and moreish, with a floral bouquet and lovely depth on the pure, orchard-fruited palate, this is a top-class example of this fashionable variety.</desciption>
+				<price>9.5</price>
+				<image>http://www.thewinesociety.com/resources/product_images/IT21241.jpg</image>
+				<age>2</age>
+			</wine>
+
+			<wine countryID="2" typeID="2" supplierID="1">
+				<name>OLD VINES IN YOUNG HANDS BRANCO 2015</name>
+				<alcohol>13</alcohol>
+				<colour>White</colour>
+				<desciption>A fruity, rounded and excellent-value Portuguese white. Made from the fruit of old mixed-planted vineyards high in the Douro, where a younger generation is making its mark at the local co-operative.</desciption>
+				<price>5.75</price>
+				<image>http://www.thewinesociety.com/resources/product_images/PW5771.jpg</image>
+				<age>2</age>
+			</wine>
+
+			<wine countryID="1" regionID="1" typeID="1" supplierID="3">
+				<name>HALF BOTTLE OF THE SOCIETY'S CLARET 2015</name>
+				<alcohol>13.0</alcohol>
+				<colour>Red</colour>
+				<desciption>A fruity and unoaked merlot-based claret, supplied for over quarter of a century by family-owned Maison Sichel.</desciption>
+				<price>3.95</price>
+				<image>http://www.thewinesociety.com/resources/product_images/CL162.jpg</image>
+				<age>1</age>
+			</wine>
+
+			<wine countryID="1" regionID="2" typeID="2" supplierID="14">
+				<name>HALF BOTTLE OF THE SOCIETY'S CHABLIS 2015</name>
+				<alcohol>12.5</alcohol>
+				<colour>White</colour>
+				<desciption>Ripe, full yet fresh Chablis. We blended three different components with Jean-Marc Brocard to produce a Chablis with good typicity.</desciption>
+				<price>7.25</price>
+				<image>http://www.thewinesociety.com/resources/product_images/BU63222.jpg</image>
+				<age>2</age>
+			</wine>
+		</wine_table> <!-- End Wine table -->
+	</database> <!-- End Database -->
+</assignment> <!-- End Assignment -->

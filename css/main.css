@@ -1,0 +1,90 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+	background-color: #420318;
+	width: 100%;
+	height: 140px;
+	color: #fff;
+	position: fixed;
+	z-index: 1;
+
+	-webkit-box-shadow: 0 6px 4px 2px black;
+	-moz-box-shadow: 0 6px 4px 2px black;
+	box-shadow: 0 6px 4px 2px black;
+}
+
+.flickr-img {
+	width: 100%;
+	height: 200px;
+}
+
+#page-title {
+	margin-top: 40px;
+	font-family: 'Pacifico', cursive;
+}
+
+#wine-logo {
+	height: 130px;
+	padding: 2px;
+	margin-top: 4px;
+	margin-left: 40px;
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+}
+
+.map-name {
+	font-family: 'Pacifico', cursive;
+}
+
+footer {
+	height: 50px;
+	width: 100%;
+	background-color: #420318;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parallax {
+    opacity: 1;
+    min-height: 100%;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    -webkit-transition:all 2s ease-in;
+    -moz-transition:all 2s ease-in;
+    -o-transition:all 2s ease-in;
+    -ms-transition:all 2s ease-in;
+    transition:all 2s ease-in;
+}
+
+.explore-text {
+    color:white;
+  	text-align: center;
+  	font-size:30;
+ 	vertical-align: middle;
+ 	position:absolute;
+ 	width:50%;
+ 	top:calc(50% - 100px);
+ 	clear:center;
+ 	right:25%;
+}
+
+#exp-text {
+	font-size: 7em;
+	font-family: 'Yesteryear', cursive;
+}
+      

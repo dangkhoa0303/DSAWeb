@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="assignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="api_keys"/>
+        <xs:element ref="api_links"/>
+        <xs:element ref="database"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="api_keys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="google_maps"/>
+        <xs:element ref="open_weather"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="google_maps" type="xs:string"/>
+  <xs:element name="open_weather" type="xs:string"/>
+  <xs:element name="api_links">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="google_api_console"/>
+        <xs:element ref="open_weather_api"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="google_api_console" type="xs:anyURI"/>
+  <xs:element name="open_weather_api" type="xs:anyURI"/>
+  <xs:element name="database">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="country_table"/>
+        <xs:element ref="region_table"/>
+        <xs:element ref="wine_type_table"/>
+        <xs:element ref="suppliers_table"/>
+        <xs:element ref="wine_table"/>
+      </xs:sequence>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="country_table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="country"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="country">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="latitude"/>
+        <xs:element ref="longitude"/>
+        <xs:element ref="population"/>
+        <xs:element ref="desciption"/>
+        <xs:element ref="languages"/>
+        <xs:element ref="climate"/>
+        <xs:element ref="economy"/>
+        <xs:element ref="history"/>
+      </xs:sequence>
+      <xs:attribute name="countryID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="region_table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="region"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="region">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="latitude"/>
+        <xs:element ref="longitude"/>
+        <xs:element ref="population"/>
+        <xs:element ref="desciption"/>
+        <xs:element ref="languages"/>
+        <xs:element ref="climate"/>
+        <xs:element ref="economy"/>
+        <xs:element ref="history"/>
+      </xs:sequence>
+      <xs:attribute name="countryID" use="required" type="xs:integer"/>
+      <xs:attribute name="regionID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wine_type_table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type">
+    <xs:complexType mixed="true">
+      <xs:attribute name="typeID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="suppliers_table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="supplier"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="supplier">
+    <xs:complexType mixed="true">
+      <xs:attribute name="supplierID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wine_table">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="wine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="alcohol"/>
+        <xs:element ref="colour"/>
+        <xs:element ref="desciption"/>
+        <xs:element ref="price"/>
+        <xs:element ref="image"/>
+        <xs:element ref="age"/>
+      </xs:sequence>
+      <xs:attribute name="countryID" use="required" type="xs:integer"/>
+      <xs:attribute name="regionID" type="xs:integer"/>
+      <xs:attribute name="supplierID" use="required" type="xs:integer"/>
+      <xs:attribute name="typeID" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="alcohol">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:minExclusive value="0"/>
+        <xs:maxExclusive value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="colour">
+    <xs:simpleType>
+      <xs:restriction base="xs:NCName">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="45"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="price">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="image" type="xs:anyURI"/>
+  <xs:element name="age">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="45"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="latitude" type="xs:decimal"/>
+  <xs:element name="longitude" type="xs:decimal"/>
+  <xs:element name="population">
+    <xs:simpleType>
+      <xs:restriction base="xs:decimal">
+        <xs:minExclusive value="0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="desciption">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="3000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="languages">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="200"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="climate">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="150"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="economy">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="500"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="history">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="2000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>

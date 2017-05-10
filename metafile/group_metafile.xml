@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.cems.uwe.ac.uk/~p-chatterjee/2016-17/modules/dsa/assignment/schemas/group_metafile_schema.xsd">
+    <!-- This file is an example of a valid group metadata file. 
+    Use this example file as a template and fill with your own data 
+    validating as you go along using Oxygen or some other schema aware editor -->
+
+    <!-- The following is the assignment metadata (DO NOT CHANGE) -->
+    <module id="UFCFV4-30-2" acronymn="DSA">
+        <title>Data Schemas &amp; Applications</title>
+        <year>2016-17</year>
+        <hand_in>2017-03-09</hand_in>
+        <spec_url>http://www.cems.uwe.ac.uk/~p-chatterjee/2016-17/modules/dsa/assignment/</spec_url>
+    </module>
+    <!-- end of metadata section -->
+
+    <!-- Group Section -->
+    <group id="V">
+        <member id="16032793" name="Khoa Phung"/>
+        <member id="15020327" name="Zheenyar Karim"/>
+        <member id="15014245" name="Abidur Rahman"/>
+        <workshop>
+            <daytime>Friday 13:00</daytime>
+            <tutor>PC</tutor>
+            <tutor>GW</tutor>
+        </workshop>
+        <!-- Each student should have contributed to one or more components -->
+        <component type="Database Design">
+            <contributor id="16032793"/>
+            <contributor id="15020327"/>
+            <!-- the following text fields allow for between 80 and 5000 characters -->
+            <description> In this section, we need to design the database using Microsoft Workbench.
+                The database includes 5 tables: Country, Region, WineType, Suppliers and Wine.
+                The database should base on the E-R modeling concept we have learned so far in the lecture.
+                This means that we have to design the batabase using the knowledge of E-R modeling and Normalization data. </description>
+            <problems> We had problems in thinking how many tables we should have and what they were except Country and Wine tables.
+                Furthermore, we had difficulties in defining the keys: which attributes should be foreign keys.
+            </problems>
+            <solutions> We read through the lecture again and defined how many tables we should have.
+                First of all, we needed 2 primary tables: Country and Wine. Then a country might have several regions.
+                So, we came up with a table named Region with the foreign key `WoeID` referencing to the Country table.
+                After that, thanks to the suggestion of the lecturer, we had 2 more tables named WineType and Suppliers respectively.
+                Because a wine type can have multiple wines and a supplier may supply several wines. So, it would make more sense if the above 2 tables existed.
+            </solutions>
+            <!-- integer required between 1 and 120 -->
+            <hours_effort>12</hours_effort>
+        </component>
+        <component type="Database Implementation">
+            <contributor id="16032793"/>
+            <contributor id="15020327"/>
+            <description> In this section, we should implement an sql file from the database designed with Microsoft Workbench.
+                It should contain sql language such as CONSTRAINT, FOREIGN KEY AND PRIMARY KEY key words.
+                After that, the sql file is then pasted to UWE php server to create tables.
+            </description>
+            <problems> At the first time, we used Microsoft Workbench to translate what we had designed into sql straight away.
+                However, when we pasted the codes into the server, it had errors. The errors were that the way Microsoft Workbench generated codes.
+                It had some lines responsible for creating the database, which was non sense when UWE server had a database already.
+            </problems>
+            <solutions> Encoutering many errors from automatically generated codes made us go to the final decision: we reviewed the sql language and designed our own.
+                Finally, we created the sql file with all tables needed. Furthermore, we also had some codes that were responsible for inserting rows into tables.
+                By doing this, we don't need to manually insert data to the tables when we switch another server. We did this at home, so we tested at home using XAMPP server.
+                It would make no efforts to insert data manually when we switch to UWE server.
+            </solutions>
+            <hours_effort>6</hours_effort>
+        </component>
+        <component type="HTML Design &amp; Markup">
+            <contributor id="16032793"/>
+            <contributor id="15014245"/>
+            <description> After designing and implementing the database, we should start with the website.
+                HTML is what we need to define the structure of the website.
+                We have 2 files that contain HTML codes: index.php and details.php.
+            </description>
+            <problems> We intended to code all HTML elements in each file. However, doing like that was just a static website.
+                We had several wines in the database, so we could not manually code and add the wines information to the HTML.
+            </problems>
+            <solutions> Due to that problem, in the HTML file, we just defined some basic and statis structure of the website such as the header and footer sections.
+                Then, we researched on the Internet to find out the solution. Finally, we found the solution.
+                Javascript could generate HTML and jQuery could be used as a useful assisstance.
+                Therefore, we followed what we had learned to tackle this problem: All HTML elements that related to display wine information were generated by javascript.
+            </solutions>
+            <hours_effort>6</hours_effort>
+        </component>
+        <component type="PHP Coding">
+            <contributor id="16032793"/>
+            <contributor id="15014245"/>
+            <contributor id="15020327"/>
+            <description> We use PHP to access the server database, query data and export Javascript variables.
+                3 PHP files are needed and they have their own tasks: one file will handle the database connection,
+                one file will process data from the Country and Region tables, and the final file will handle the data from the Wine table.
+            </description>
+            <problems> We did not know how to pass values from PHP (server side) to Javascript (browser side).
+                We wanted to communicate between PHP and Javascript because we had PHP files and Javascript files separate.
+                The problem came up when we could not pass the data (got from server using PHP) to script file.
+            </problems>
+            <solutions> We tried to find on the Internet to find a way out.
+                Finally, we noticed that PHP could generate both HTML and Javascript using "echo" command.
+                Therefore, we used PHP just to query all the data we needed from the server, process the data (handle errors) and export the data as Javascript form.
+            </solutions>
+            <hours_effort>12</hours_effort>
+        </component>
+        <component type="Javascript / JSON Coding">
+            <contributor id="16032793"/>
+            <contributor id="15020327"/>
+            <description> Javascript is used as the main tool on browser side.
+                Javascript is responsible for generating HTML elements (HTML elements displaying wine information),
+                fetching api (google maps api and open weather api) and handling user events (hovering and clicking).
+            </description>
+            <problems> We used jQuery as part of Javascript to access the HTML DOM (for the purpose of appending HTML elements)
+                but we were not familiar with jQuery and the way it accessed the DOM element.
+            </problems>
+            <solutions> We searched on the Internet and took a look at the lecture to learn more about DOM.
+                Then, we tried accessing the HTML DOM using Developer Tool on Google Chrome. The most common command we used is console.log().
+                After sucessfully testing, we started implementing and finally we did it
+                when the application appended HTML DOM elements represeting wine information perfectly.
+            </solutions>
+            <hours_effort>8</hours_effort>
+        </component>
+        <component type="CSS Design">
+            <contributor id="16032793"/>
+            <contributor id="15014245"/>
+            <description> CSS is used to define the appearance of the website.
+                It determines the position, the style and the size of each element on the website.
+                We use bootstrap as a tool to make our website look nicer.
+            </description>
+            <problems> We had some minor problems in using bootstrap.
+                We did not know which class to use as bootstrap has a lot of classes like "col-md-3", "img-responsive", etc.
+            </problems>
+            <solutions> We went to bootstrap official website and tried to read through the documentation.
+                Finally, we came up with a website fully implemented with bootstrap.
+                Especially, we made use of one of the most powerful tool in bootstrap, which is grid. This made our website look much better.
+            </solutions>
+            <hours_effort>6</hours_effort>
+        </component>
+    </group>
+
+    <!-- This section gives a link to group components, lists the techohnolgies used and 
+        points to any number of source files. Note that the more that these links work - 
+        the higher the mark for this section. Of course - the base_url link must work!! -->
+    <application>
+        <!-- Make sure the base_url for the main application is reachable as 
+            http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/ -->
+        <base_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/index.php</base_url>
+        <!-- a list of up to 8 technologies used (see schema) -->
+        <technologies>
+            <tech>php</tech>
+            <tech>html5</tech>
+            <tech>xml</tech>
+            <tech>javascript</tech>
+            <tech>css</tech>
+        </technologies>
+        <!-- configuration source file (should be .xml) & configuration schema file (should be .xsd) -->
+        <config_source>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/xml/configuration.xml</config_source>
+        <config_schema>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/xml/configuration.xsd</config_schema>
+        <!-- URL of the Data Model - could be a HTML page with an image file or a gif/png file-->
+        <dm_source>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/database/Wine.mwb</dm_source>
+        <source_files>
+            <!-- application UI files (have UI) -->
+            <file>
+                <name>index.php</name>
+                <purpose>main application file</purpose>
+                <!-- source file should in a browser viewable format (e.g .phps, .xml, .txt, etc.) -->
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/index.phps</source_url>
+            </file>
+            <file>
+                <name>details.php</name>
+                <purpose>display wines associated with a country or region selected,
+                    this file cannot be opened straight away because it needs some variables used as GET medthod</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/details.phps</source_url>
+            </file>
+            <!-- End application UI files -->
+            
+            <!-- php folder -->
+            <file>
+                <name>connection.php</name>
+                <purpose>open connection to the database</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/php/connection.phps</source_url>
+            </file>
+            <file>
+                <name>fetchRegions.php</name>
+                <purpose>get country and region data from Country and Region tables and export data to javascript</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/php/fetchRegions.phps</source_url>
+            </file>
+            <file>
+                <name>wineData.php</name>
+                <purpose>get wine information from WineType, Suppliers and Wine tables and exxport data to javascript</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/php/wineData.phps</source_url>
+            </file>
+            <file>
+                <name>wine_to_rss.php</name>
+                <purpose>generate rss feed from wines in the database</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/php/wine_to_rss.phps</source_url>
+            </file>
+            <!-- End php folder -->
+            
+            <!-- js folder -->
+            <file>
+                <name>main.js</name>
+                <purpose>handle apis and user events on the main page of the application</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/js/main.js</source_url>
+            </file>
+            <file>
+                <name>detailsBuilder.js</name>
+                <purpose>handle apis and user events on the main page of the application</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/js/detailsBuilder.js</source_url>
+            </file>
+            <!-- End js folder -->
+            
+            <!-- css folder. this folder contains 2 customized css files and 4 bootstrap files. We do not include the bootstrap files in here. -->
+            <file>
+                <name>main.css</name>
+                <purpose>handle the appearance of the main page</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/css/main.css</source_url>
+            </file>
+            <file>
+                <name>details.css</name>
+                <purpose>handle the appearance of the detail page</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/css/details.css</source_url>
+            </file>
+            <!-- End css folder -->
+            
+            <!-- images folder contains 2 images for the wine logo and the wine marker. We do not indlude the images in this folder here. -->
+            
+            <!-- database folder. this folder contains 3 files: 1 sql file and 2 data model files generated by Microsoft Workbench. We only innclude the sql file here -->
+            <file>
+                <name>wineDatabase.sql</name>
+                <purpose>contains all sql codes for the database</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment/database/wineDatabase.sql</source_url>
+            </file>
+            <!-- End database folder -->
+        </source_files>
+    </application>
+
+    <!-- something about any learning outcomes achieved and any other overall comments -->
+    <overall_comments> 
+        This assignment was interesting. It made us learn a lot in PHP, HTML, Javascript, CSS, RSS and SQL.
+        Thanks to this assignment, we know how to create a complete website on both server and browser sides.
+    </overall_comments>
+</group_metafile>
+<!-- DSA Assignment Group Metadata File Example, 2016-17 -->

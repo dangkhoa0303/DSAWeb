@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<individual_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.cems.uwe.ac.uk/~p-chatterjee/2016-17/modules/dsa/assignment/schemas/individual_metafile_schema.xsd">
+    <!-- This file is an example of a valid individual metadata file. 
+    Use this example file as a template and update with your own data 
+    validating as you go along using Oxygen or some other schema aware editor -->    
+    <group id="V"/>
+    <student id="16032793"/>
+    <!--- List of at least one, possibly more, individual component you worked on  -->
+    <component type="Photo Widget">
+        <description> I chose to implement flickr api as part of the individual task.
+            In this task, flickr api is used to fetch photos relating a country or a region.
+            The photos should be shown on the main page of the application.
+            When mouse hovers a marker on the map, the application should check for the cookie associated with the country or the region hovered. 
+            If cookie does not exist, flickr api should be called to fetch photos and store those photos locally in a variable. 
+            Otherwise, photos should be fetched locally from the variable that stores them. 
+            Cookie is set to expire after 2 minutes.
+        </description>
+        <problems> I tried to use php for flickr api. But I had difficulty in getting the country or region information.
+            Mouse hover is handled by javascript on the browser side, but flickr is used on the server side.
+            So, I could not make it possible to pass information from javascript to php.
+        </problems>
+        <solutions> Finally, I came up with the idea of fetch flickr api using javascript.
+            I used ajax to get json from flickr api and handled it on the browser side.
+            After getting photo data as json (using ajax), I managed to append HTML elements to the info windows to display the photos.
+        </solutions>
+        <hours_effort>8</hours_effort>
+        <!-- This should be an URL to the working component - maybe part of the base page -->
+        <base_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment_individual/index.php</base_url>
+        <technologies>
+            <tech>php</tech>
+            <tech>javascript</tech>
+            <tech>html5</tech>
+        </technologies>
+        <source_files>
+            <file>
+                <name>main.js</name>
+                <purpose>codes were added to this file to fetch flickr photos</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment_individual/js/main.js</source_url>
+            </file>
+            <file>
+                <name>index.php</name>
+                <purpose>main page with embedded photos</purpose>
+                <source_url>http://www.cems.uwe.ac.uk/~kd2-phung/dsa/assignment_individual/index.phps</source_url>
+            </file>
+        </source_files>
+    </component>
+    <individual_comment> This part is quite confusing with the flickr api.
+        I had to read the documentation several times to understand how to get the address of a photo.
+        Generally, this part is interesting when images just show up in the info windows when the marker is hovered.
+    </individual_comment>
+</individual_metafile>
+<!-- DSA Individual Metadata File Example, 2016-17 -->
+<!-- author: Khoa2.Phung@live.uwe.ac.uk -->

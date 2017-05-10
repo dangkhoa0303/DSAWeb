@@ -1,0 +1,103 @@
+header {
+	background-color: #420318;
+	width: 100%;
+	height: 165px;
+}
+
+footer {
+	height: 50px;
+	width: 100%;
+	background-color: #420318;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#wine-logo {
+	height: 130px;
+	padding: 5px;
+	margin-top: 16px;
+	margin-left: 40px;
+}
+
+#region-title {
+	color: white;
+	margin-top: 30px; 
+	border-right: 1px white solid;
+	border-left: 1px white solid;
+}
+
+#weather-session {
+	padding-left: 8px;
+}
+
+.weather-forecast {
+	color: #4DB6AC;
+}
+
+.weather-text {
+	color: #AFB42B;
+}
+
+.wine-title {
+	font-size: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 2px #a6093d solid;
+	border-bottom: 2px #a6093d solid;
+	color: #a6093d;
+}
+
+.wine-desc {
+	padding-right: 5px;
+}
+
+.wine-image {
+	max-height: 230px;
+}
+
+.price-session {
+	width: 22%;
+	height: 230px;
+	background-color: #f6f7e5;
+	padding: 0;
+	margin-left: 10px;
+}
+
+.price-title {
+	margin: 0;
+	background-color: #a8ad00;
+	color: white;
+	font-size: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.price-text {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+
+#forecast-table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.forecast-text {
+	font-size: 1.2em;
+}
+
+.weather-col {
+	width: 100px;
+}
+
+article:hover {
+	background-color: #efebe9;
+}
+
+article {
+	padding: 15px;
+}
